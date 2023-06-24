@@ -1,6 +1,6 @@
 import { Head } from "minista"
 
-export default function () {
+const home = () => {
   return (
     <>
       <Head>
@@ -11,3 +11,5 @@ export default function () {
     </>
   )
 }
+
+export default home
