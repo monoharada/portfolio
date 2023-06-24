@@ -6,12 +6,14 @@
     "dev": "minista",
     "build": "minista build",
     "preview": "minista preview",
-    "lint": "eslint --ext .jsx,.js,.tsx,.ts src/ && stylelint src/**/*.css --fix "
+    "lint": "markuplint src/**/*.tsx && eslint --ext .jsx,.js,.tsx,.ts src/ && stylelint src/**/*.css --fix "
   },
   "prettier": {
     "semi": false
   },
   "devDependencies": {
+    "@markuplint/jsx-parser": "^3.8.0",
+    "@markuplint/react-spec": "^3.9.0",
     "@types/react": "^18.2.7",
     "@types/react-dom": "^18.2.4",
     "@typescript-eslint/eslint-plugin": "^5.60.0",
@@ -22,6 +24,7 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
+    "markuplint": "^3.11.0",
     "minista": "^3.0.0",
     "prettier": "^2.8.8",
     "react": "^18.2.0",
