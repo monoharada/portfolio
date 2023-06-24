@@ -1,6 +1,6 @@
-import { DescriptionListProps } from "../components/descriptionList"
+import { DescriptionListItem } from "../components/descriptionList"
 
-export const descriptionList: DescriptionListProps[] = [
+export const descriptionList: DescriptionListItem[] = [
   {
     title: "名前",
     contents: (

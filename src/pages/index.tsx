@@ -38,7 +38,7 @@ const home = () => {
           <p>「コーディングによって自分ではなく顧客の課題を解決する。」</p>
           <stack-space space='32' />
           <grid-container style={{ '--grid-cols': 3 } as React.CSSProperties}>
-          <DescriptionList data={skillSets} />
+          <DescriptionList data={skillSets} className={'card'} />
           </grid-container>
         </section>
       </main>

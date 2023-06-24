@@ -1,4 +1,4 @@
-@layer pico, base;
+@layer pico, base,component;
 
 @layer base {
 :root {
@@ -20,7 +20,13 @@
   --component-padding: var(--space-sm);
   --grid-item-width: 200px;
   --grid-gap: var(--space-lg);
-  --inset-space: var(--space-unit)
+  --inset-space: var(--space-unit);
+/* rounded */
+--card-round:6px;
+  /* color */
+  --border-color:#ccc;
+  --card-border:1px solid var(--border-color);
+
   }
 
 
@@ -107,5 +113,16 @@ grid-container[cols='fill'] {
 }
 grid-container > dl {
   display:contents;
+}
+}
+
+@layer component {
+.card:has(dt) {
+border:var(--card-border);
+padding:var(--space-sm);
+border-radius: var(--card-round);
+display:flex;
+flex-direction:column;
+gap:var(--space-xs);
 }
 }
