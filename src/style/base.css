@@ -1,0 +1,7 @@
+@layer pico base;
+
+@layer base {
+  main {
+    width: min(100% - 2rem, 70rem);
+  }
+}

@@ -1,5 +1,6 @@
 import { Head } from "minista"
-
+import "../style/pico.fluid.classless.css"
+import "../style/base.css"
 const home = () => {
   return (
     <>
