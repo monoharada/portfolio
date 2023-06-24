@@ -9,6 +9,10 @@ export declare global {
         React.HTMLAttributes<HTMLDivElement>,
         HTMLDivElement
       >
+      "grid-container": React.DetailedHTMLProps<
+        React.HTMLAttributes<HTMLDivElement>,
+        HTMLDivElement
+      >
     }
   }
 }

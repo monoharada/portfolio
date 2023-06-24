@@ -1,6 +1,6 @@
 console.log("init?")
 const osDark = window.matchMedia("(prefers-color-scheme: dark)")
-const themeSwitch = document.getElementById("themeSwitch")
+const themeSwitch = document.getElementById("theme")
 // ダークモードがオンの時に実行する処理
 function darkModeOn() {
   document.documentElement.dataset.theme = "dark" // ルート要素<html>にクラスを追加

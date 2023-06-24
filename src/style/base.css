@@ -19,22 +19,31 @@
   --container-width: 70rem;
   --component-padding: var(--space-sm);
   --grid-item-width: 200px;
-  --grid-gap: var(--space-sm);
+  --grid-gap: var(--space-lg);
   --inset-space: var(--space-unit)
   }
 
 
   main,
   header {
-    width: min(100% - 2rem, 70rem);
+    display: grid;
+    padding:0;
+    width: min(
+      100% - var(--container-padding, var(--space-lg)),
+      var(--container-width)
+    );
+    margin-inline: auto
   }
+
   dl,
   dd,
   dt {
     margin: 0;
     padding: 0;
   }
-  dl {
+
+
+  :not(grid-container) > dl > div {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 10px var(--spacing-md, 20px);
@@ -49,21 +58,21 @@
   padding-block: var( --stack-space);
 }
 stack-space[space='8'] {
-  --stack-space: var(--space-xxs)
+  --stack-space: var(--space-xxs);
 }
 stack-space[space='12'] {
-  -stack-space: var(--space-sm)
+  -stack-space: var(--space-sm);
   padding-block-end: 0;
 }
 stack-space[space='16'] {
 
 }
 stack-space[space='20'] {
-  --stack-space: var(--space-md)
+  --stack-space: var(--space-md);
   padding-block-end: 0;
 }
 stack-space[space='32'] {
-  --stack-space: var(--space-lg)
+  --stack-space: var(--space-lg);
   padding-block-end:  0;
 }
 stack-space[space='64'] {
@@ -75,5 +84,28 @@ flex-box {
   display:flex;
   align-items:var(--align);
   gap:var(--space-md)
+}
+
+/* grid system */
+grid-container {
+  --grid-cols: 3;
+  --grid-item-width: calc(var(--container-width)  / var(--grid-cols) - var(--grid-gap));
+
+  display: grid;
+  grid-gap: var(--grid-gap);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(var(--grid-item-width, 0), 1fr)
+  );
+}
+grid-container[cols='fill'] {
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(0, var(--grid-item-width, 1fr))
+  );
+  
+}
+grid-container > dl {
+  display:contents;
 }
 }
