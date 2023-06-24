@@ -1,4 +1,4 @@
-import { DescriptionListProps } from "../../components/descriptionList"
+import { DescriptionListProps } from "../components/descriptionList"
 
 export const descriptionList: DescriptionListProps[] = [
   {
