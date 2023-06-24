@@ -8,7 +8,8 @@
     "skipLibCheck": true,
     "noErrorTruncation": true,
     "jsx": "react-jsx",
-    "types": ["minista/client"]
+    "types": ["minista/client"],
+
   },
-  "include": ["./minista.config.ts", "src"]
+  "include": ["./minista.config.ts", "src", "src/types/index.d.ts"]
 }
