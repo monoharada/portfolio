@@ -37,7 +37,7 @@
   dl {
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: 10px var(--spacing-1, 20px);
+    gap: 10px var(--spacing-md, 20px);
   }
 
 
@@ -70,5 +70,10 @@ stack-space[space='64'] {
   --stack-space: var(--space-lg)
 }
 
-
+flex-box {
+  --align:center;
+  display:flex;
+  align-items:var(--align);
+  gap:var(--space-md)
+}
 }

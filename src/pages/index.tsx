@@ -14,6 +14,7 @@ const home = () => {
       </Head>
       <header>
         <fieldset>
+          <div></div>
           <label htmlFor="theme">
             <input
               type="checkbox"
@@ -27,16 +28,17 @@ const home = () => {
       </header>
       <main>
         <h1>僕は努力しない自分は嫌いだ</h1>
-        <Image
-          src="/public/img_admin.png"
-          alt="my image"
-          format="webp"
-          width={400}
-          height={400}
-          loading="eager"
-        />
-        <stack-space space="12" />
-        <DescriptionList data={descriptionList} />
+        <flex-box style={{ '--align': 'end' } as React.CSSProperties} >
+          <Image
+            src="/public/img_admin.png"
+            alt="my image"
+            format="webp"
+            width={400}
+            height={400}
+            loading="eager"
+          />
+          <DescriptionList data={descriptionList} />
+        </flex-box>
       </main>
     </>
   )
