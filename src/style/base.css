@@ -1,128 +1,156 @@
 @layer pico, base,component;
 
 @layer base {
-:root {
-  /* spacing */
-  /* spacing */
-  --space-unit: 1rem; /* 16px */
-  --space-xxxxs: calc(0.125 * var(--space-unit)) /* 2px */;
-  --space-xxxs: calc(0.25 * var(--space-unit)) /* 4px */;
-  --space-xxs: calc(0.375 * var(--space-unit)) /* 6px */;
-  --space-xs: calc(0.5 * var(--space-unit)) /* 8px */;
-  --space-sm: calc(0.75 * var(--space-unit)) /* 12px */;
-  --space-md: calc(1.25 * var(--space-unit)) /* 20px */;
-  --space-lg: calc(2 * var(--space-unit)) /* 32px */;
-  --space-xl: calc(3.25 * var(--space-unit)) /* 52px */;
-  --space-xxl: calc(5.25 * var(--space-unit)) /* 84px */;
-  --space-xxxl: calc(8.5 * var(--space-unit)) /* 136px */;
-  --space-xxxxl: calc(13.75 * var(--space-unit)) /* 220px */;
-  --container-width: 70rem;
-  --component-padding: var(--space-sm);
-  --grid-item-width: 200px;
-  --grid-gap: var(--space-lg);
-  --inset-space: var(--space-unit);
-/* rounded */
---card-round:6px;
-  /* color */
-  --border-color:#ccc;
-  --card-border:1px solid var(--border-color);
+  :root {
+    /* spacing */
 
+    /* spacing */
+    --space-unit: 1rem; /* 16px */
+    --space-xxxxs: calc(0.125 * var(--space-unit)) /* 2px */;
+    --space-xxxs: calc(0.25 * var(--space-unit)) /* 4px */;
+    --space-xxs: calc(0.375 * var(--space-unit)) /* 6px */;
+    --space-xs: calc(0.5 * var(--space-unit)) /* 8px */;
+    --space-sm: calc(0.75 * var(--space-unit)) /* 12px */;
+    --space-md: calc(1.25 * var(--space-unit)) /* 20px */;
+    --space-lg: calc(2 * var(--space-unit)) /* 32px */;
+    --space-xl: calc(3.25 * var(--space-unit)) /* 52px */;
+    --space-xxl: calc(5.25 * var(--space-unit)) /* 84px */;
+    --space-xxxl: calc(8.5 * var(--space-unit)) /* 136px */;
+    --space-xxxxl: calc(13.75 * var(--space-unit)) /* 220px */;
+    --container-width: 60rem;
+    --component-padding: var(--space-sm);
+    --grid-item-width: 200px;
+    --grid-gap: var(--space-lg);
+    --inset-space: var(--space-unit);
+
+    /* rounded */
+    --card-round: 6px;
+
+    /* color */
+    --border-color: #ccc;
+    --card-border: 1px solid var(--border-color);
   }
-
 
   main,
   header {
     display: grid;
-    padding:0;
     width: min(
       100% - var(--container-padding, var(--space-lg)),
       var(--container-width)
     );
-    margin-inline: auto
+    
+    margin-inline: auto;
+  }
+  main {
+    padding: 0;
+  }
+  header > fieldset {
+    margin-left: auto;
   }
 
   dl,
   dd,
   dt {
-    margin: 0;
     padding: 0;
+    margin: 0;
   }
 
-
-  :not(grid-container) > dl > div {
+  :not(grid-container) > dl > div:not(.stack) {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 10px var(--spacing-md, 20px);
   }
-
-
+dl:has(.stack) {
+  display:grid;
+  gap:var(--space-md);
+}
   stack-space {
-  --stack-space: var(--space-xs);
-  display: block;
-  line-height: 0;
-  visibility: hidden;
-  padding-block: var( --stack-space);
-}
-stack-space[space='8'] {
-  --stack-space: var(--space-xxs);
-}
-stack-space[space='12'] {
-  -stack-space: var(--space-sm);
-  padding-block-end: 0;
-}
-stack-space[space='16'] {
+    --stack-space: var(--space-xs);
 
-}
-stack-space[space='20'] {
-  --stack-space: var(--space-md);
-  padding-block-end: 0;
-}
-stack-space[space='32'] {
-  --stack-space: var(--space-lg);
-  padding-block-end:  0;
-}
-stack-space[space='64'] {
-  --stack-space: var(--space-lg)
-}
+    display: block;
+    padding-block: var(--stack-space);
+    line-height: 0;
+    visibility: hidden;
+  }
 
-flex-box {
-  --align:center;
-  display:flex;
-  align-items:var(--align);
-  gap:var(--space-md)
-}
+  stack-space[space="8"] {
+    --stack-space: var(--space-xxs);
+  }
 
-/* grid system */
-grid-container {
-  --grid-cols: 3;
-  --grid-item-width: calc(var(--container-width)  / var(--grid-cols) - var(--grid-gap));
+  stack-space[space="12"] {
+    -stack-space: var(--space-sm);
+    padding-block-end: 0;
+  }
 
-  display: grid;
-  grid-gap: var(--grid-gap);
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(var(--grid-item-width, 0), 1fr)
-  );
-}
-grid-container[cols='fill'] {
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(0, var(--grid-item-width, 1fr))
-  );
-  
-}
-grid-container > dl {
-  display:contents;
-}
+  stack-space[space="16"] {
+  }
+
+  stack-space[space="20"] {
+    --stack-space: var(--space-md);
+
+    padding-block-end: 0;
+  }
+
+  stack-space[space="32"] {
+    --stack-space: var(--space-lg);
+
+    padding-block-end: 0;
+  }
+
+  stack-space[space="64"] {
+    --stack-space: var(--space-lg);
+  }
+
+  flex-box {
+    --align: center;
+
+    display: flex;
+    gap: var(--space-md);
+    align-items: var(--align);
+  }
+
+  /* grid system */
+  grid-container {
+    --grid-cols: 3;
+    --grid-item-width: calc(
+      var(--container-width) / var(--grid-cols) - var(--grid-gap)
+    );
+
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(var(--grid-item-width, 0), 1fr)
+    );
+    grid-gap: var(--grid-gap);
+  }
+
+  grid-container[cols="fill"] {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(0, var(--grid-item-width, 1fr))
+    );
+  }
+
+  grid-container > dl {
+    display: contents;
+  }
 }
 
 @layer component {
-.card:has(dt) {
-border:var(--card-border);
-padding:var(--space-sm);
-border-radius: var(--card-round);
-display:flex;
-flex-direction:column;
-gap:var(--space-xs);
-}
+  .card:has(dt) ,.stack:has(dt) {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+  .card:has(dt) {
+    
+    padding: var(--space-sm);
+    border: var(--card-border);
+    border-radius: var(--card-round);
+  }
+
+  .stack dt {
+font-weight:bold;
+  }
+
 }
