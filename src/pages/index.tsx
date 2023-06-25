@@ -23,12 +23,13 @@ const home = () => {
         <h1>僕は努力しない自分は嫌いだ</h1>
         <flex-box style={{ '--align': 'end' } as React.CSSProperties} >
           <Image
-            src="/public/img_admin.png"
+            src="/src/assets/image/img_admin.png"
             alt="my image"
             format="webp"
             width={400}
             height={400}
             loading="eager"
+            quality={65}
           />
           <DescriptionList data={descriptionList} />
         </flex-box>
