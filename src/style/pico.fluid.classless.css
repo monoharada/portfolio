@@ -211,7 +211,7 @@ samp {
 kbd {
   --font-weight: bolder;
 }
-/* purgecss start ignore */
+/*! purgecss start ignore */
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
   --background-color: #fff;
@@ -534,7 +534,7 @@ kbd {
 
   color-scheme: dark;
 }
-/* purgecss end ignore */
+/*! purgecss end ignore */
 
 progress,
 [type="checkbox"],
@@ -559,7 +559,7 @@ progress,
   text-decoration: inherit;
   vertical-align: inherit;
 }
-/* purgecss start ignore */
+/*! purgecss start ignore */
 :where(:root) {
   font-family: var(--font-family);
   font-size: var(--font-size);
@@ -573,7 +573,7 @@ progress,
   text-size-adjust: 100%;
   text-rendering: optimizelegibility;
 }
-/* purgecss end ignore */
+/*! purgecss end ignore */
 /**
  * Sectioning
  * Container and responsive spacings for header, main, footer
