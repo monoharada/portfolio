@@ -33,19 +33,24 @@
 
   main,
   header {
-    display: grid;
     width: min(
       100% - var(--container-padding, var(--space-lg)),
       var(--container-width)
     );
-    
+
     margin-inline: auto;
   }
   main {
     padding: 0;
   }
-  header > fieldset {
-    margin-left: auto;
+  header {
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+    align-items: center;
+  }
+  header > * {
+    margin-bottom: var(--spacing);
   }
 
   dl,
@@ -60,10 +65,10 @@
     grid-template-columns: auto 1fr;
     gap: 10px var(--spacing-md, 20px);
   }
-dl:has(.stack) {
-  display:grid;
-  gap:var(--space-md);
-}
+  dl:has(.stack) {
+    display: grid;
+    gap: var(--space-md);
+  }
   stack-space {
     --stack-space: var(--space-xs);
 
@@ -137,20 +142,19 @@ dl:has(.stack) {
 }
 
 @layer component {
-  .card:has(dt) ,.stack:has(dt) {
+  .card:has(dt),
+  .stack:has(dt) {
     display: flex;
     flex-direction: column;
     gap: var(--space-xs);
   }
   .card:has(dt) {
-    
     padding: var(--space-sm);
     border: var(--card-border);
     border-radius: var(--card-round);
   }
 
   .stack dt {
-font-weight:bold;
+    font-weight: bold;
   }
-
 }
