@@ -6,6 +6,7 @@ import { descriptionList } from "../api/descriptionData"
 import { skillSets } from "../api/skillSets"
 import ThemeSwitch from "../components/themeSwitch"
 import React from "react"
+import { achievements } from "../api/achievements"
 
 
 const home = () => {
@@ -40,6 +41,10 @@ const home = () => {
           <grid-container style={{ '--grid-cols': 3 } as React.CSSProperties}>
           <DescriptionList data={skillSets} className={'card'} />
           </grid-container>
+        </section>
+        <section>
+          <h2>事例</h2>
+          <DescriptionList data={achievements} className="stack"/>
         </section>
       </main>
     </>
