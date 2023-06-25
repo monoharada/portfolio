@@ -1,6 +1,6 @@
-import { DescriptionListProps } from "../components/descriptionList"
+import { DescriptionListItem } from "../components/descriptionList"
 
-export const skillSets: DescriptionListProps[] = [
+export const skillSets: DescriptionListItem[] = [
   {
     title: "HTML",
     contents:
@@ -27,7 +27,7 @@ export const skillSets: DescriptionListProps[] = [
       "NodeJS、browserJSどちらもTypeScriptで開発する。積極的に型推論を利用し開発速度を高める。",
   },
   {
-    title: "GenerativeAi",
+    title: "GenerativeAI",
     contents:
       <>使用する。<br />質問ではなく、要求を投げる。<br />15分を20秒に、1週間を30分にするために使用する。</>,
     },
