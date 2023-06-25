@@ -13,11 +13,13 @@ const home = () => {
   return (
     <>
       <Head>
-        <title>Hello!</title>
+        <title>monoharadaのポートフォリオ</title>
+        <meta name="description" content="monoharadaのポートフォリオ、業務改善及びフロントエンドの品質・効率化をご相談ください。このページのソース:https://github.com/monoharada/portfolio" />
         <script type="module" src="/src/assets/entry.ts" />
       </Head>
       <header>
         <ThemeSwitch />
+        <a href="https://github.com/monoharada/portfolio" target="_blank" rel="noopener noreferrer">GITHUB</a>
       </header>
       <main>
         <h1>僕は努力しない自分は嫌いだ</h1>
