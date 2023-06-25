@@ -4,9 +4,10 @@
   "type": "module",
   "scripts": {
     "dev": "minista",
-    "build": "minista build",
+    "build": "minista build && npm run purge",
     "preview": "minista preview",
-    "lint": "markuplint src/**/*.tsx && eslint --ext .jsx,.js,.tsx,.ts src/ && stylelint src/**/*.css --fix "
+    "lint": "markuplint src/**/*.tsx && eslint --ext .jsx,.js,.tsx,.ts src/ && stylelint src/**/*.css --fix ",
+    "purge":"purgecss --css dist/assets/bundle.css  --content dist/index.html -o dist/assets/bundle.css"
   },
   "prettier": {
     "semi": false
@@ -33,6 +34,7 @@
   },
   "dependencies": {
     "eslint-plugin-prettier": "^4.2.1",
+    "purgecss": "^5.0.0",
     "stylelint": "^15.9.0",
     "stylelint-config-recess-order": "^4.2.0",
     "stylelint-config-standard": "^33.0.0",

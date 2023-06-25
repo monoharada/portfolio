@@ -211,7 +211,7 @@ samp {
 kbd {
   --font-weight: bolder;
 }
-
+/* purgecss start ignore */
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
   --background-color: #fff;
@@ -534,6 +534,7 @@ kbd {
 
   color-scheme: dark;
 }
+/* purgecss end ignore */
 
 progress,
 [type="checkbox"],
@@ -558,7 +559,7 @@ progress,
   text-decoration: inherit;
   vertical-align: inherit;
 }
-
+/* purgecss start ignore */
 :where(:root) {
   font-family: var(--font-family);
   font-size: var(--font-size);
@@ -567,17 +568,13 @@ progress,
   color: var(--color);
   overflow-wrap: break-word;
   tab-size: 4;
-  tab-size: 4;
-  tab-size: 4;
   cursor: default;
   background-color: var(--background-color);
   -webkit-tap-highlight-color: transparent;
   text-size-adjust: 100%;
-  text-size-adjust: 100%;
-  text-size-adjust: 100%;
   text-rendering: optimizelegibility;
 }
-
+/* purgecss end ignore */
 /**
  * Sectioning
  * Container and responsive spacings for header, main, footer
@@ -671,7 +668,6 @@ a,
   --background-color: transparent;
 
   color: var(--color);
-  text-decoration: var(--text-decoration);
   text-decoration: var(--text-decoration);
   background-color: var(--background-color);
   outline: none;
@@ -1068,8 +1064,6 @@ select,
 textarea {
   padding: var(--form-element-spacing-vertical) var(--form-element-spacing-horizontal);
   appearance: none;
-  appearance: none;
-  appearance: none;
 }
 
 input,
@@ -1162,7 +1156,7 @@ textarea[disabled],
 input::placeholder,
 input::input-placeholder,
 textarea::placeholder,
-textarea::-webkit-input-placeholder,
+textarea::input-placeholder,
 select:invalid {
   color: var(--form-element-placeholder-color);
   opacity: 1;
@@ -1223,8 +1217,6 @@ label > :where(input, select, textarea) {
   margin-left: 0;
   font-size: inherit;
   vertical-align: middle;
-  appearance: none;
-  appearance: none;
   appearance: none;
   cursor: pointer;
   border-width: var(--border-width);
@@ -1454,7 +1446,6 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"])[type
   outline: none;
   box-shadow: var(--box-shadow);
   transition: background-color var(--transition), border-color var(--transition), color var(--transition), box-shadow var(--transition);
-  transition: background-color var(--transition), border-color var(--transition), color var(--transition), box-shadow var(--transition);
   -webkit-margin-start: 0;
   -webkit-margin-end: calc(var(--spacing) / 2);
 }
@@ -1486,7 +1477,6 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"])[type
   outline: none;
   box-shadow: var(--box-shadow);
   transition: background-color var(--transition), border-color var(--transition), color var(--transition), box-shadow var(--transition);
-  transition: background-color var(--transition), border-color var(--transition), color var(--transition), box-shadow var(--transition);
 }
 
 [type="file"]::-ms-browse:is(:hover, :active, :focus) {
@@ -1498,8 +1488,6 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"])[type
   width: 100%;
   height: 1.25rem;
   appearance: none;
-  appearance: none;
-  appearance: none;
   background: none;
 }
 
@@ -1509,7 +1497,6 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"])[type
   background-color: var(--range-border-color);
   border-radius: var(--border-radius);
   transition: background-color var(--transition), box-shadow var(--transition);
-  transition: background-color var(--transition), box-shadow var(--transition);
 }
 
 [type="range"]::-moz-range-track {
@@ -1518,7 +1505,6 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"])[type
   background-color: var(--range-border-color);
   border-radius: var(--border-radius);
   transition: background-color var(--transition), box-shadow var(--transition);
-  transition: background-color var(--transition), box-shadow var(--transition);
 }
 
 [type="range"]::-ms-track {
@@ -1526,7 +1512,6 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"])[type
   height: 0.25rem;
   background-color: var(--range-border-color);
   border-radius: var(--border-radius);
-  transition: background-color var(--transition), box-shadow var(--transition);
   transition: background-color var(--transition), box-shadow var(--transition);
 }
 
@@ -1540,7 +1525,6 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"])[type
   border: 2px solid var(--range-thumb-border-color);
   border-radius: 50%;
   transition: background-color var(--transition), transform var(--transition);
-  transition: background-color var(--transition), transform var(--transition);
 }
 
 [type="range"]::-moz-range-thumb {
@@ -1553,7 +1537,6 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"])[type
   border: 2px solid var(--range-thumb-border-color);
   border-radius: 50%;
   transition: background-color var(--transition), transform var(--transition);
-  transition: background-color var(--transition), transform var(--transition);
 }
 
 [type="range"]::-ms-thumb {
@@ -1565,7 +1548,6 @@ input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"])[type
   background-color: var(--range-thumb-color);
   border: 2px solid var(--range-thumb-border-color);
   border-radius: 50%;
-  transition: background-color var(--transition), transform var(--transition);
   transition: background-color var(--transition), transform var(--transition);
 }
 
@@ -1895,7 +1877,6 @@ dialog {
   background-color: var(--modal-overlay-background-color);
   border: 0;
   backdrop-filter: var(--modal-overlay-backdrop-filter);
-  backdrop-filter: var(--modal-overlay-backdrop-filter);
 }
 
 dialog article {
@@ -2074,8 +2055,6 @@ progress {
   margin-bottom: calc(var(--spacing) * 0.5);
   overflow: hidden;
   color: var(--progress-color);
-  appearance: none;
-  appearance: none;
   appearance: none;
   background-color: var(--progress-background-color);
   border: 0;
@@ -2257,7 +2236,6 @@ nav li[role="list"] a {
 
 nav details[role="list"] summary + ul,
 nav li[role="list"] > ul {
-  min-width: fit-content;
   min-width: fit-content;
   border-radius: var(--border-radius);
 }

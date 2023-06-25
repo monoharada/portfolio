@@ -38,18 +38,20 @@
       100% - var(--container-padding, var(--space-lg)),
       var(--container-width)
     );
-
     margin-inline: auto;
   }
+
   main {
     padding: 0;
   }
+
   header {
     display: flex;
     gap: 20px;
-    justify-content: end;
     align-items: center;
+    justify-content: end;
   }
+
   header > * {
     margin-bottom: var(--spacing);
   }
@@ -66,10 +68,9 @@
     grid-template-columns: auto 1fr;
     gap: 10px var(--spacing-md, 20px);
   }
-  dl:has(.stack) {
-    display: grid;
-    gap: var(--space-md);
-  }
+
+ 
+
   stack-space {
     --stack-space: var(--space-xs);
 
@@ -88,8 +89,8 @@
     padding-block-end: 0;
   }
 
-  stack-space[space="16"] {
-  }
+  /* stack-space[space="16"] {
+  } */
 
   stack-space[space="20"] {
     --stack-space: var(--space-md);
@@ -114,6 +115,7 @@
     gap: var(--space-md);
     align-items: var(--align);
   }
+
   flex-box[wrap] {
     flex-wrap:wrap;
   }
@@ -143,6 +145,11 @@
   grid-container > dl {
     display: contents;
   }
+
+  dl:has(.stack) {
+    display: grid;
+    gap: var(--space-md);
+  }
 }
 
 @layer component {
@@ -152,6 +159,7 @@
     flex-direction: column;
     gap: var(--space-xs);
   }
+
   .card:has(dt) {
     padding: var(--space-sm);
     border: var(--card-border);
