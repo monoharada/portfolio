@@ -21,7 +21,7 @@ export const descriptionList: DescriptionListItem[] = [
   },
   {
     title: "役割",
-    contents: 'プロジェクトマネージャー、エンジニアリングマネージャー、フロントエンドエンジニア、テクニカルディレクター、etc.'
+    contents: 'エンジニアリングマネージャー、フロントエンドエンジニア、テクニカルディレクター、etc.'
   },
   {
     title: "居住",
