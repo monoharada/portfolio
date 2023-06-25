@@ -6,7 +6,7 @@ export declare global {
         HTMLDivElement
       >
       "flex-box": React.DetailedHTMLProps<
-        React.HTMLAttributes<HTMLDivElement>,
+        React.HTMLAttributes<HTMLDivElement> & { wrap?: boolean },
         HTMLDivElement
       >
       "grid-container": React.DetailedHTMLProps<
