@@ -563,7 +563,6 @@ progress,
 :where(:root) {
   font-family: var(--font-family);
   font-size: var(--font-size);
-  font-weight: var(--font-weight);
   line-height: var(--line-height);
   color: var(--color);
   overflow-wrap: break-word;
@@ -1049,7 +1048,7 @@ fieldset {
 label,
 fieldset legend {
   display: block;
-  margin-bottom: calc(var(--spacing) * 0.25);
+  /* margin-bottom: calc(var(--spacing) * 0.25); */
   font-weight: var(--form-label-font-weight, var(--font-weight));
 }
 
