@@ -113,6 +113,9 @@
     gap: var(--space-md);
     align-items: var(--align);
   }
+  flex-box[wrap] {
+    flex-wrap:wrap;
+  }
 
   /* grid system */
   grid-container {

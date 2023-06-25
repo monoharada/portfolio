@@ -23,7 +23,7 @@ const home = () => {
       </header>
       <main>
         <h1>僕は努力しない自分は嫌いだ</h1>
-        <flex-box style={{ '--align': 'end' } as React.CSSProperties} >
+        <flex-box style={{ '--align': 'end' } as React.CSSProperties} wrap>
           <Image
             src="/src/assets/image/img_admin.png"
             alt="my image"
