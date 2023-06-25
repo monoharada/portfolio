@@ -2,7 +2,7 @@ const themeSwitch = () => {
     return (
         <fieldset>
           <label htmlFor="theme">
-            <input
+          <input
               type="checkbox"
               role="switch"
               id="theme"

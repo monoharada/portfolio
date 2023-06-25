@@ -1,14 +1,15 @@
 console.log("init?")
 const osDark = window.matchMedia("(prefers-color-scheme: dark)")
-const themeSwitch = document.getElementById("theme")
+console.log(osDark)
+const themeSwitch = document.getElementById("theme") as HTMLInputElement
 // ダークモードがオンの時に実行する処理
 function darkModeOn() {
-  document.documentElement.dataset.theme = "dark" // ルート要素<html>にクラスを追加
+  document.documentElement.dataset.theme = "dark"
 }
 // ダークモードがオフの時に実行する処理
 function darkModeOff() {
-  document.documentElement.classList.remove("darkmode") // クラスの削除
-  document.documentElement.dataset.theme = "light" // ルート要素<html>にクラスを追加
+  // クラスの削除
+  document.documentElement.dataset.theme = "light"
 }
 
 // イベントリスナー
@@ -21,7 +22,7 @@ const listener = (event) => {
 }
 // リスナー登録
 osDark.addEventListener("change", listener)
-themeSwitch.checked = osDark
+themeSwitch.checked = osDark.matches
 // 初期化処理
 listener(osDark)
 

@@ -22,6 +22,7 @@
     --grid-item-width: 200px;
     --grid-gap: var(--space-lg);
     --inset-space: var(--space-unit);
+    --line-height: 1.8;
 
     /* rounded */
     --card-round: 6px;
