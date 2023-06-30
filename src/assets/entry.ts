@@ -1,6 +1,4 @@
-console.log("init?")
 const osDark = window.matchMedia("(prefers-color-scheme: dark)")
-console.log(osDark)
 const themeSwitch = document.getElementById("theme") as HTMLInputElement
 // ダークモードがオンの時に実行する処理
 function darkModeOn() {
