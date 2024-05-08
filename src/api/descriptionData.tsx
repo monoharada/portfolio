@@ -27,5 +27,5 @@ export const descriptionList: DescriptionListItem[] = [
     title: "居住",
     contents: "東京",
   },
-  { title: "家族", contents: "妻・長男（10歳）・長女（7歳）" },
+  { title: "家族", contents: "妻・長男（11歳）・長女（8歳）" },
 ]
