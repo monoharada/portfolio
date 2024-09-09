@@ -21,11 +21,11 @@ export const descriptionList: DescriptionListItem[] = [
   },
   {
     title: "役割",
-    contents: 'エンジニアリングマネージャー、フロントエンドエンジニア、テクニカルディレクター、etc.'
+    contents: 'アクセシビリティアドボケイト、エンジニアリングマネージャー、フロントエンドエンジニア、テクニカルディレクター、etc.'
   },
   {
     title: "居住",
     contents: "東京",
   },
-  { title: "家族", contents: "妻・長男（11歳）・長女（8歳）" },
+  { title: "家族", contents: "妻・長男（12歳）・長女（8歳）" },
 ]

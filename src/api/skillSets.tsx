@@ -4,17 +4,17 @@ export const skillSets: DescriptionListItem[] = [
   {
     title: "HTML",
     contents:
-      "マシンリーダブル、A11y、合理的な属性値を意識する。jsレスな新しい要素を積極的に使用する。カスタム要素を使用し静的HTMLでも宣言的なUIを実現する。ブラウザの読み込みを考慮しユーザビリティを高める。",
+      "マシンリーダブル、A11y、Divスープさせないマークアップを意識する。jsレスな新しい要素を積極的に使用する。カスタム要素を使用し静的HTMLでも宣言的なUIを実現する。ブラウザの読み込みを考慮しユーザビリティを高める。",
   },
   {
     title: "CSS",
     contents:
-      "postCSS,その他プリプロセッサー（scssなど）を使用しつつ、モダンCSSを使用したセマンティクスなCSSを記述する",
+      "postCSSをすこしだけ、変数、@layer、css-nestなどモダンCSSで構築する。CSSフレームワークもSASSなどのレガシープリプロセッサーも必要が無いことを体現する",
   },
   {
     title: "JavaScript",
     contents:
-      "browserに配信されるスクリプトは宣言的に記述する。状態の変化にはクラス属性よりもaria属性など意味合いのある属性を操作する。単一責任、YAGNIで開発する。",
+      "browserに配信されるスクリプトは宣言的に記述する。状態の変化にはクラス属性よりもaria属性など意味合いのある属性を操作する。単一責任、YAGNIで開発する。Web Componentsが好き",
   },
   {
     title: "開発手法",
@@ -24,12 +24,12 @@ export const skillSets: DescriptionListItem[] = [
   {
     title: "TypeScript",
     contents:
-      "NodeJS、browserJSどちらもTypeScriptで開発する。積極的に型推論を利用し開発速度を高める。",
+      <>NodeJS、browserJSどちらもTypeScriptを使用する。</>,
   },
   {
     title: "GenerativeAI",
     contents:
-      <>使用する。<br />質問ではなく、要求を投げる。<br />15分を20秒に、1週間を30分にするために使用する。</>,
+      <>15分を20秒に、1週間を30分にするために使用する。</>,
     },
     {
         title: "マネジメント",
@@ -38,6 +38,6 @@ export const skillSets: DescriptionListItem[] = [
     },
     {
         title: 'コミュニケーション',
-        contents: '知っていることをすべて伝える。ローコンテクストに徹する。良くないものは良くないと伝える努力をする。'
+        contents: <><p>知っていることをすべて伝える。ローコンテクストに徹する。良くないものは良くないと伝える努力をする。</p><p><i>人々があなたがどのように言っているかではなく、何を言っているかに集中できるようにする</i></p></>
     }
 ]
